@@ -37,7 +37,7 @@ export const getInfoOs = ({ network_type }): IOs => {
       ...osInfo,
       name: name || '',
       version: version || '',
-      network_type: network_type || navigator['connection'] ? navigator['connection'].effectiveType : '',
+      network_type: network_type,
       language: navigator.language || 'zh-cn',
     }
   } else {
@@ -50,7 +50,7 @@ export const getInfoOs = ({ network_type }): IOs => {
       ...osInfo,
       name: name,
       version: os.release(),
-      network_type: network_type || '',
+      network_type: network_type,
       language,
       payload: {}
     }
