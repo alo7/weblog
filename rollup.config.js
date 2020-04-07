@@ -58,16 +58,4 @@ export default [{
     name: 'WebLog',
     sourcemap: false,
   }
-}, {
-  input: 'src/index.ts',
-  plugins: plugins,
-  onwarn: onwarn,
-  output: {
-    file: '../logtest/javascript-log.js',
-    banner,
-    env,
-    format: 'umd',
-    name: 'WebLog',
-    sourcemap: false,
-  }
 }]
